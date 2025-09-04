@@ -113,11 +113,11 @@ export default function Home() {
 
       <div className="side-ad ad-left">
           <ins className="adsbygoogle" style={{ display: 'block' }} data-ad-client="ca-pub-2004567674410865" data-ad-slot="3913597721" data-ad-format="auto" data-full-width-responsive="true"></ins>
-          <Script id="ad-left-script">{(adsbygoogle = window.adsbygoogle || []).push({});}</Script>
+          <Script id="ad-left-script" dangerouslySetInnerHTML={{ __html: `(adsbygoogle = window.adsbygoogle || []).push({});` }} />
       </div>
       <div className="side-ad ad-right">
           <ins className="adsbygoogle" style={{ display: 'block' }} data-ad-client="ca-pub-2004567674410865" data-ad-slot="3913597721" data-ad-format="auto" data-full-width-responsive="true"></ins>
-          <Script id="ad-right-script">{(adsbygoogle = window.adsbygoogle || []).push({});}</Script>
+          <Script id="ad-right-script" dangerouslySetInnerHTML={{ __html: `(adsbygoogle = window.adsbygoogle || []).push({});` }} />
       </div>
 
       <header className="main-header">
@@ -159,10 +159,11 @@ export default function Home() {
                   
                   <div className="ad-container">
                       <ins className="adsbygoogle" style={{ display: 'block' }} data-ad-client="ca-pub-2004567674410865" data-ad-slot="5218940536" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                      <Script id="ad-main-script">{(adsbygoogle = window.adsbygoogle || []).push({});}</Script>
+                      <Script id="ad-main-script" dangerouslySetInnerHTML={{ __html: `(adsbygoogle = window.adsbygoogle || []).push({});` }} />
                   </div>
               </div>
 
+              {/* All other content sections as provided */}
               <div className="content-section">
                 <h2 className="info-title">What is Dice Dreams Free Rolls Today?</h2>
                 <p>Free rolls in Dice Dreams are essentially free spins of the dice that allow players to continue building kingdoms, attacking rivals, and collecting rewards without spending money. These free rolls are essential for progressing in the game, and players can claim them daily through special links or other in-game methods explained below on this page.</p>
@@ -212,7 +213,24 @@ export default function Home() {
                               <p>Yes, 100%. Every link on our website is an official reward link provided directly by the game&apos;s developers, SuperPlay. We simply collect and test them for your convenience.</p>
                           </div>
                       </div>
-                      {/* ... other FAQ items ... */}
+                      <div className="faq-item">
+                          <button className="faq-question">Can I use cheats to get unlimited Dice Dreams Free Rolls?</button>
+                          <div className="faq-answer">
+                              <p>No, there are no legitimate cheats for unlimited rolls. Any tool or website claiming to offer this is likely a scam and could compromise your account&apos;s security. The only safe way to get free rolls is through official links and in-game activities.</p>
+                          </div>
+                      </div>
+                      <div className="faq-item">
+                          <button className="faq-question">After how long do free links expire?</button>
+                          <div className="faq-answer">
+                              <p>Most official reward links are only valid for 48 to 72 hours after they are issued. That&apos;s why it&apos;s important to visit our site daily to claim the latest links before they expire.</p>
+                          </div>
+                      </div>
+                      <div className="faq-item">
+                          <button className="faq-question">What is the reason for not getting free rolls after clicking the link?</button>
+                          <div className="faq-answer">
+                              <p>There are a few common reasons: 1) You have already claimed that specific reward from another source. 2) The link has expired. 3) You must have the Dice Dreams app installed on your device before clicking the link.</p>
+                          </div>
+                      </div>
                   </div>
               </div>
 
@@ -221,6 +239,7 @@ export default function Home() {
                   <p>Dice Dreams free rolls are the best way to enjoy the game without spending real money. By claiming the links provided here, logging in daily, completing events, and sharing with friends, you can quickly grow your roll count and keep playing longer.</p>
                   <p>All the links on our site are safe, secure, and sourced directly from the official Dice Dreams pages, so you can claim them with confidence. Stay updated with the latest rewards, play smartly, and make your kingdom stronger every single day.</p>
               </div>
+
           </div>
       </main>
 
